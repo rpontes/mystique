@@ -1,0 +1,36 @@
+{
+ "exception": {
+   "time": "2019-01-09 09:03:57 UTC",
+   "incident_id": "5bdb1fb079681b4c5e19d9f7",
+   "number": 3,
+   "site": "My test app",
+   "environment": "development",
+   "app_url": "https://appsignal.com/test/sites/5bd867fa2213937f3666ae7b",
+   "url": "https://appsignal.com/test/sites/5bd867fa2213937f3666ae7b/incidents/3?timestamp=2019-01-09T09%3A03%3A57Z",
+   "revision": "abc123",
+   "user": "tom",
+   "namespace": "web",
+   "exception": "Appsignal::Demo::TestError",
+   "message": "Hello world! This is an error used for demonstration purposes.",
+   "app_backtrace": [
+     "/Users/tombruijn/.gem/ruby/2.5.3/gems/appsignal-2.8.1/lib/appsignal/demo.rb:49:in `create_example_error_request'",
+     "/Users/tombruijn/.gem/ruby/2.5.3/gems/appsignal-2.8.1/lib/appsignal/demo.rb:35:in `transmit'",
+     "/Users/tombruijn/.gem/ruby/2.5.3/gems/appsignal-2.8.1/lib/appsignal/cli/demo.rb:53:in `run'",
+     "/Users/tombruijn/.gem/ruby/2.5.3/gems/appsignal-2.8.1/lib/appsignal/cli.rb:31:in `run'",
+     "/Users/tombruijn/.gem/ruby/2.5.3/gems/appsignal-2.8.1/bin/appsignal:7:in `<top (required)>'",
+     "/Users/tombruijn/.gem/ruby/2.5.3/bin/appsignal:23:in `load'",
+     "/Users/tombruijn/.gem/ruby/2.5.3/bin/appsignal:23:in `<top (required)>'",
+     "/Users/tombruijn/.gem/ruby/2.5.3/bin/bundle:23:in `<main>'"
+   ],
+   "first_backtrace_line": "/Users/tombruijn/.gem/ruby/2.5.3/gems/appsignal-2.8.1/lib/appsignal/demo.rb:49:in `create_example_error_request'",
+   "action": "DemoControllerello",
+   "path": "/hello",
+   "hostname": "Toms-MacBook-Pro.local",
+   "action_label": "request",
+   "metadata": {
+     "demo_sample": "true",
+     "method": "GET",
+     "path": "/hello"
+   }
+ }
+}
