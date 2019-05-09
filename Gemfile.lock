@@ -70,7 +70,6 @@ GEM
     unf (0.1.4)
       unf_ext
     unf_ext (0.0.7.6)
-    vcr (4.0.0)
     webmock (3.5.1)
       addressable (>= 2.3.6)
       crack (>= 0.3.2)
@@ -86,7 +85,6 @@ DEPENDENCIES
   rack-test
   rspec
   sinatra
-  vcr
   webmock
 
 RUBY VERSION
