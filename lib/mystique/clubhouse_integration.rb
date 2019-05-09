@@ -15,7 +15,7 @@ module Mystique
         name: title,
         story_type: 'bug',
         description: description,
-        labels: [client.label(id: ENV['LABEL_AIRBRAKE_ID']).to_h]
+        labels: [client.label(id: ENV['LABEL_AIRBRAKE_ID'].to_i).to_h]
       )
     end
 
@@ -24,7 +24,7 @@ module Mystique
     attr_accessor :client, :exception_message
 
     def project
-      client.project(id: ENV['PROJECT_CLUBHOUSE_ID'])
+      client.project(id: ENV['PROJECT_CLUBHOUSE_ID'].to_i)
     end
 
     def title
