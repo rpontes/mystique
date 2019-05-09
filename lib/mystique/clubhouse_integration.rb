@@ -6,8 +6,7 @@ module Mystique
   # Clubhouse integration
   class ClubhouseIntegration
     def initialize(exception_message)
-      @client = Clubhouse::Client.new(api_key: '5cd1f174-cd9f-4afd-b797-2fb32764c474')
-      # @client = Clubhouse::Client.new(api_key: 'xxxx')
+      @client = Clubhouse::Client.new(api_key: ENV['CLUBHOUSE_TOKEN'])
       @exception_message = exception_message
     end
 
@@ -16,7 +15,7 @@ module Mystique
         name: title,
         story_type: 'bug',
         description: description,
-        labels: [client.label(id: 7062).to_h]
+        labels: [client.label(id: ENV['LABEL_AIRBRAKE_ID']).to_h]
       )
     end
 
@@ -25,7 +24,7 @@ module Mystique
     attr_accessor :client, :exception_message
 
     def project
-      client.project(id: 5649)
+      client.project(id: ENV['PROJECT_CLUBHOUSE_ID'])
     end
 
     def title
